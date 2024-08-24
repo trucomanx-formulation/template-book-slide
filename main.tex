@@ -1,0 +1,86 @@
+\documentclass[20pt,twoside]{memoir}
+
+\ifx\EnableEbookVersion\undefined
+    \usepackage[osf]{libertine} % Use the Libertine font
+\fi
+
+
+
+\usepackage{lipsum}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx} % Pacote para incluir gráficos
+\usepackage{tikz} % Pacote para gráficos vetoriais
+\usepackage{xcolor} % Pacote para cores
+
+\usepackage{geometry}
+\geometry{paperwidth=209.6mm,paperheight=209.6mm, % Tamanho A4
+          left=20mm,top=20mm,                 % Margens
+          right=20mm,bottom=20mm}
+
+
+% Definir a cor global da fonte
+\definecolor{mycolor}{RGB}{0,90,150} % Defina a cor desejada (ex: azul)
+
+% Comando para definir a imagem de fundo
+\newcommand{\backgroundimage}[1]{
+    \begin{tikzpicture}[remember picture,overlay]
+        \node[at=(current page.south west),anchor=south west,inner sep=0pt] {
+            \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{#1}
+        };
+    \end{tikzpicture}
+}
+
+%\renewcommand{\normalsize}{\fontsize{28pt}{34pt}\selectfont}
+
+\newenvironment{slide-frame}
+{
+\clearpage % Começar em uma nova página
+%\noindent
+}
+{
+\clearpage % Terminar com uma nova página
+}
+
+\newenvironment{slide-frame-center}%
+{
+\clearpage % Começar em uma nova página
+\vspace*{\fill}%
+\centering % Alinhamento horizontal
+%%
+}
+{
+\vspace*{\fill}%
+\clearpage % Terminar com uma nova página
+}
+
+
+\input{structure/book-box/conf1}
+
+\begin{document}
+
+\begin{slide-frame-center}
+\noindent
+Não fui eu que ordenei a você? Seja forte e corajoso! Não se apavore nem desanime, 
+pois o Senhor, o seu Deus, estará com você por onde você andar
+\end{slide-frame-center}
+
+\begin{slide-frame}
+\centering
+\includegraphics[width=0.7\textwidth]{path/to/your/image.eps}
+\end{slide-frame}
+
+\begin{slide-frame}
+\begin{book-box-top}texto com cor global\end{book-box-top}
+\lipsum[1][1-2]
+\end{slide-frame}
+
+\begin{slide-frame}
+\backgroundimage{path/to/your/background1.jpg} % Substitua pelo caminho da sua imagem
+\begin{book-box-top}texto com cor global\end{book-box-top}
+\centering
+\includegraphics[width=0.7\textwidth]{path/to/your/image.eps}
+\end{slide-frame}
+
+
+
+\end{document}
