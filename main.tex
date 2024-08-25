@@ -1,19 +1,21 @@
 \documentclass[20pt,extrafontsizes,twoside]{memoir}
 
-\input{main.info}
-\input{structure/head-packages}
-\input{structure/head-colors}
-\input{structure/head-macros}
+\input{structure/information-book} %% Global variables with book information
+\input{structure/head-packages} %% external packages used in the book 
+\input{structure/head-colors} %% palete color in the book
+\input{structure/head-macros} %% Macros created to this book 
 
-\usepackage{packages/separator-rule}
-\usepackage{packages/background-images}
-\usepackage{packages/catalographic-card}
+\usepackage{packages/separator-rule}     %% Downloaded macro: Many rules
+\usepackage{packages/background-images}  %% Downloaded macro: Put images
+\usepackage{packages/catalographic-card} %% Downloaded macro: Make catalographic card
 
 
+%% Enviroments created to this book
 \input{structure/enviroment/book-box/style1}
 \input{structure/enviroment/slide-frame}
 \input{structure/enviroment/slide-frame-center}
 
+%% Change font
 %\renewcommand{\normalsize}{\fontsize{28pt}{34pt}\selectfont}
 
 \begin{document}
@@ -22,37 +24,7 @@
 \input{front-matter/copyright}
 \input{front-matter/dedicatoria}
 
-\begin{slide-frame}
-\thispagestyle{empty}
-\PutPageBackgroundImage{content/cigarra.jpg} % Substitua pelo caminho da sua imagem
-\end{slide-frame}
-
-\begin{slide-frame-center}
-\noindent
-Não fui eu que ordenei a você? Seja forte e corajoso! Não se apavore nem desanime, 
-pois o Senhor, o seu Deus, estará com você por onde você andar
-\PutPageSouthImage[width=0.1\textwidth,sep=1cm]{logos/pensador.eps}
-\end{slide-frame-center}
-
-\begin{slide-frame}
-\centering
-\includegraphics[width=0.7\textwidth]{content/image.eps}
-\end{slide-frame}
-
-\begin{slide-frame}
-\begin{book-box}texto com cor global\end{book-box}
-\lipsum[1][1-2]
-\end{slide-frame}
-
-\begin{slide-frame}
-\PutPageBackgroundImage{content/background1.jpg} % Substitua pelo caminho da sua imagem
-\centering
-\lipsum[1][1-3]
-
-\includegraphics[width=0.3\textwidth]{content/image.eps}
-\begin{book-box}texto com cor global\end{book-box}
-\end{slide-frame}
-
+\input{main-matter/capitulo}
 
 \input{back-matter/end}
 \input{back-matter/colofao}
