@@ -1,0 +1,40 @@
+
+
+\newpage
+\thispagestyle{empty}
+
+\def \TextAtTopOfPage{\BookEditionText}
+\def \TextAtBottomOfPage{\BookEditionYear}%% {Gerado no dia \today}
+
+\begingroup
+{
+%
+\newgeometry{left=0.1\textwidth,right=0.1\textwidth,top=0.0cm,bottom=0.0cm}
+\begin{tikzpicture}[remember picture,overlay]
+    \node[at=(current page.south west),anchor=south west,inner sep=1cm] {
+        \includegraphics[width=0.40\textwidth]{logos/pensador} % Image background
+    };
+\end{tikzpicture}
+
+\noindent\begin{minipage}{\textwidth}
+\centering\fontsize{0.035\textheight}{0pt}\selectfont%
+\vspace{0.05\textheight}%
+\TextAtTopOfPage%
+\vspace{0.05\textheight}%
+\end{minipage}
+%
+\noindent\begin{minipage}{\textwidth}
+\centering%
+{\fontsize{0.08\textheight}{0}\selectfont \BookTitle\\[0.02\textheight]}%
+{\fontsize{0.06\textheight}{0}\selectfont \BookSubTitle}%
+\end{minipage}
+\vspace{0.14\textheight}
+\begin{flushright}
+    {\fontsize{0.035\textheight}{0pt}\selectfont \BookAuthor}\\[1\baselineskip]
+    {\fontsize{0.035\textheight}{0pt}\selectfont \BookLocalCity/\BookLocalState}\\[1\baselineskip]
+    {\fontsize{0.035\textheight}{0pt}\selectfont \TextAtBottomOfPage}
+\end{flushright}
+%
+}
+\endgroup
+

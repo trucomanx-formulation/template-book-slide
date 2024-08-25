@@ -1,5 +1,11 @@
 #!/bin/bash
 
+curl https://sourceforge.net/p/latex-macros-packages/catalographic-card/ci/main/tree/catalographic-card.sty?format=raw -o catalographic-card.sty
+
+curl https://sourceforge.net/p/latex-macros-packages/background-images/ci/master/tree/background-images.sty?format=raw -o background-images.sty
+
+curl https://sourceforge.net/p/latex-macros-packages/separator-rule/ci/main/tree/separator-rule.sty?format=raw -o separator-rule.sty
+
 curl https://sourceforge.net/p/latex-macros-packages/math-macros/ci/main/tree/math-macros.sty?format=raw -o math-macros.sty
 
 curl https://sourceforge.net/p/latex-macros-packages/env-highlight-multipleimg/ci/master/tree/env-highlight-multipleimg.sty?format=raw -o env-highlight-multipleimg.sty

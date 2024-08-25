@@ -7,4 +7,7 @@ rm -f main.out
 rm -f main.snm
 rm -f main.synctex.gz
 rm -f main.toc
-rm -f */*/*/*eps-converted-to.pdf
+rm -f pictures/*/*/*/*eps-converted-to.pdf
+rm -f pictures/*/*/*eps-converted-to.pdf
+rm -f pictures/*/*eps-converted-to.pdf
+rm -f pictures/*eps-converted-to.pdf

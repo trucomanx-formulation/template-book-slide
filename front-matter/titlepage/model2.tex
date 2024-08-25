@@ -1,0 +1,48 @@
+\newpage
+\thispagestyle{empty}
+
+\def \plogo{\includegraphics[width=0.05\textwidth]{logos/logo-bw-1}}
+% não precisa %\usepackage{PTSerif} % Use the Paratype Serif font
+
+
+
+{ % Suppresses headers and footers on the title page
+
+	\centering % Centre all text
+	\vspace{10pt}
+	{\fontsize{30pt}{0pt}\selectfont\bfseries\BookEditionText}
+    \vspace{10pt}
+	%------------------------------------------------
+	%	Title and subtitle
+	%------------------------------------------------
+	
+	\setlength{\unitlength}{0.8\textwidth} % Set the width of the curly brackets above and below the titles
+	
+	{\color{green!50!black}\resizebox*{\unitlength}{\baselineskip}{\rotatebox{90}{$\}$}}}\\[\baselineskip] % Top curly bracket
+	
+	\textcolor{red!50!black}{\fontsize{50pt}{0pt}\selectfont \BookTitle}\\[\baselineskip] % Title
+	
+	{\color{red!50!white}\fontsize{30pt}{0pt}\selectfont \BookSubTitle}\\ % Subtitle or further description
+	
+	{\color{green!50!black}\resizebox*{\unitlength}{\baselineskip}{\rotatebox{-90}{$\}$}}} % Bottom curly bracket
+	
+	\vfill % Whitespace between the title and the author name
+	
+	%------------------------------------------------
+	%	Author
+	%------------------------------------------------
+	
+	{\fontsize{30pt}{0pt}\selectfont\bfseries\BookAuthor}\\ % Author name
+	
+	\vfill % Whitespace between the author name and the publisher logo
+	
+	%------------------------------------------------
+	%	Publisher
+	%------------------------------------------------
+	
+	\plogo\\[0.5\baselineskip] % Publisher logo
+	
+	{\fontsize{30pt}{0pt}\selectfont\bfseries\BookEditionYear} % Year % Publisher name
+
+}
+
