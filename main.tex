@@ -1,4 +1,4 @@
-\documentclass[20pt,extrafontsizes,twoside]{memoir}
+\documentclass[14pt,extrafontsizes,twoside]{memoir} %% 5, 6, 7, 8, 9, 10, 11, 12, 14, 17, 20 and 25
 
 \input{structure/information-book} %% Global variables with book information
 \input{structure/head-packages} %% external packages used in the book 
@@ -20,12 +20,26 @@
 %\renewcommand{\normalsize}{\fontsize{28pt}{34pt}\selectfont}
 
 \begin{document}
-
+%%%%%%%%%%%
+\frontmatter
 \input{front-matter/titlepage/model1}
 \input{front-matter/copyright}
 \input{front-matter/dedicatoria}
+\input{front-matter/prologo}
 
-\input{main-matter/capitulo}
+%%%%%%%%%%%
+\newpage
+\tableofcontents
+
+%%%%%%%%%%%
+\mainmatter
+\input{main-matter/chapter-filler}
+
+\input{main-matter/chapter-1}
+\input{main-matter/chapter-2}
+
+%%%%%%%%%%%
+\backmatter
 
 \input{back-matter/end}
 \input{back-matter/colofao}
