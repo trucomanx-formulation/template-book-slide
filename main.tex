@@ -2,8 +2,8 @@
 
 \input{structure/information-book} %% Global variables with book information
 \input{structure/head-packages} %% external packages used in the book 
-\input{structure/head-colors} %% palete color in the book
 \input{structure/head-macros} %% Macros created to this book 
+\input{structure/color-scheme/color-falacia} %% colors should be after head macros
 
 % packages *.sty in the directory "packages"
 \usepackage{separator-rule}     %% Downloaded macro: Many rules
@@ -18,6 +18,12 @@
 
 %% Change font
 %\renewcommand{\normalsize}{\fontsize{28pt}{34pt}\selectfont}
+
+%% Set de default color of all pages
+\pagecolor{colorDefault!15!white}
+
+%% Set de default color of all text
+\color{colorDefault}
 
 \begin{document}
 %%%%%%%%%%%
